@@ -113,7 +113,7 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz_default_plugins/LaserScan
       Color: 255; 255; 255
-      Color Transformer: Intensity   #flatcolor for dots
+      Color Transformer: Intensity   #라이다에 intensity 체널 없어서 점이 안보이면 FlatColor로 수정
       Decay Time: 0  
       Enabled: true
       Invert Rainbow: false
@@ -131,8 +131,8 @@ Visualization Manager:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
-        Reliability Policy: Best Effort   # depends on publisher Reliable
-        Value: /scan                      # /hokuyo/scan
+        Reliability Policy: Best Effort   # depends on publisher (퍼블리셔가 Reliable 이면 rviz도 동일하게 설정)
+        Value: /scan                      # /hokuyo/scan (라이다 topic 이름에 맞춰 설정)
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
